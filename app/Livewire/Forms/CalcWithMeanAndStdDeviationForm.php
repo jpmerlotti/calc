@@ -34,7 +34,6 @@ class CalcWithMeanAndStdDeviationForm extends Component
             "min" => $this->mean - $this->stdError,
             "max" => $this->mean + $this->stdError
         ];
-        dump($z);
         $this->isCalculated = true;
     }
 }
