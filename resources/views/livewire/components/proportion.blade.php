@@ -19,7 +19,7 @@
         class="bg-white border border-amber-500 text-amber-500 rounded py-2 px-10">Enviar</button>
     </div>
     @if($isCalculated)
-        <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div class="rounded-lg px-8 pt-6 pb-8 mb-4 flex flex-col">
             <span>Tamanho Total da amostra: {{ $populationSize }}</span>
             <span>Proporção de sucesso: {{ number_format(($successPopulationSize / $populationSize), 2, ',', '.') }}</span>
             <span>Ep: {{ number_format($propError, 2, ',', '.') }}</span>

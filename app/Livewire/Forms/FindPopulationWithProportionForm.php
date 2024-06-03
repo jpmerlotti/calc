@@ -21,7 +21,7 @@ class FindPopulationWithProportionForm extends Component
         $this->percentage /= 100;
         $this->stdError = str_replace(',', '.', $this->stdError);
         $z = $this->zScore($this->confidence/100);
-        $this->populationSize = ceil((($z ** 2) * ($this->percentage * (1 - $this->percentage)) / ($this->stdError ** 2)) ** 2);
+        $this->populationSize = ceil(($z ** 2) * ($this->percentage * (1 - $this->percentage)) / ($this->stdError ** 2));
         $this->isCalculated = true;
     }
     public function render()
