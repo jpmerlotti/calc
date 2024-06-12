@@ -32,7 +32,7 @@
             <span>Média: {{ $mean }}</span>
             <span>Desvio Padrão: {{ number_format($stdDeviation, 2, ',', '.') }}</span>
             <span>Erro Médio: {{ number_format($stdError, 2, ',', '.') }}</span>
-            <span>Intervalo de Confiança: {{ number_format($confidenceInterval['min'], 2, ',', '.') }} < {{ $mean }} < {{ number_format($confidenceInterval['max'], 2, ',', '.') }} </span>
+            <span>Intervalo de Confiança: {{ number_format($confidenceInterval['min'], 2, ',', '.') }} < µ < {{ number_format($confidenceInterval['max'], 2, ',', '.') }} </span>
         </div>
     @endif
 </div>

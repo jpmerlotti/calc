@@ -14,6 +14,8 @@ class Percentage extends Component
     public $confidence = 95;
     public $propError;
     public $isCalculated = false;
+    public $min;
+    public $max;
 
     public function calculate()
     {
@@ -21,6 +23,8 @@ class Percentage extends Component
         $this->percentage /= 100;
         $z = $this->zScore($this->confidence/100);
         $this->propError = $z * sqrt($this->percentage * (1 - $this->percentage) / $this->populationSize);
+        $this->min = $this->percentage - $this->propError;
+        $this->max = $this->percentage + $this->propError;
         $this->isCalculated = true;
     }
 

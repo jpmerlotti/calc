@@ -23,6 +23,7 @@
             <span>Tamanho Total da amostra: {{ $populationSize }}</span>
             <span>Proporção de sucesso: {{ number_format(($successPopulationSize / $populationSize), 2, ',', '.') }}</span>
             <span>Ep: {{ number_format($propError, 2, ',', '.') }}</span>
+            <span>Intervalo: {{ number_format($min, 2, ',', '.') }} < µ < {{ number_format($max, 2, ',', '.') }}</span>
         </div>
     @endif
 </div>

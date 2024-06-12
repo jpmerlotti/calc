@@ -14,6 +14,8 @@ class Proportion extends Component
     public $confidence = 95;
     public $propError;
     public $isCalculated = false;
+    public $min;
+    public $max;
 
     public function calculate()
     {
@@ -22,6 +24,8 @@ class Proportion extends Component
         $proportion = $this->successPopulationSize / $this->populationSize;
         $this->propError = $z * sqrt($proportion * (1 - ($proportion)) / $this->populationSize);
         $this->isCalculated = true;
+        $this->min = $proportion - $this->propError;
+        $this->max = $proportion + $this->propError;
         // dump(['z' => $z, 'proportion' => $proportion, 'ep' => $this->propError]);
     }
 

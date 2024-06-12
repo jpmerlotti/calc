@@ -21,7 +21,7 @@ class FindPopulationWithMediaForm extends Component
         $this->stdDeviation = str_replace(',', '.', $this->stdDeviation);
         $this->stdError = str_replace(',', '.', $this->stdError);
         $z = $this->zScore($this->confidence/100);
-        $this->populationSize = round((($z * $this->stdDeviation) / $this->stdError) ** 2);
+        $this->populationSize = ceil((($z * $this->stdDeviation) / $this->stdError) ** 2);
         $this->isCalculated = true;
     }
 
